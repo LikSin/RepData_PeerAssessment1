@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 After fork/clone of the repository is done, the repository contains the following:  
 1. *doc* folder containing *instructions.pdf* describing the assignment  
@@ -55,7 +60,7 @@ g <- ggplot(totaldailysteps, aes(date, steps))
 g+geom_histogram(stat="identity")+labs(title="Total number of steps taken each day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
 
 Calculate and report the mean and median total number of steps taken
 per day
@@ -97,7 +102,7 @@ g <- ggplot(averageStepsPerInterval, aes(interval, steps, group=1))
 g+geom_line()+labs(title="Average number of steps per 5-minute interval")+scale_x_datetime(breaks = pretty_breaks(10), labels = date_format("%H%M"))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-8-1.png) 
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
 
 Find the 5-minute interval, on average across all the days in the dataset,
 contains the maximum number of steps
@@ -148,7 +153,7 @@ g <- ggplot(filledtotaldailysteps, aes(date, steps))
 g+geom_histogram(stat="identity")+labs(title="Total number of steps (filled) taken each day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-13-1.png) 
+![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
 
 Calculate and report the mean and median total number of steps taken
 per day
@@ -203,6 +208,6 @@ g <- ggplot(sepAverageStepsPerInterval, aes(interval, steps, group=1))
 g+geom_line()+facet_grid(day~.)+labs(title="Average number of steps per 5-minute interval")+scale_x_datetime(breaks = pretty_breaks(10), labels = date_format("%H%M"))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-17-1.png) 
+![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17-1.png) 
 
 As made apparent in the plot, there is significant difference in the average number of steps between weekdays and weekends.
